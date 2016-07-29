@@ -1,0 +1,46 @@
+{
+  "name": "eslint-config-uber-jsx",
+  "version": "1.0.0",
+  "description": "The base jsx eslint config for web JavaScript at Uber",
+  "keywords": [
+    "eslint",
+    "lint",
+    "jsx",
+    "react",
+    "reactjs",
+    "uber-library",
+    "uber-web"
+  ],
+  "bugs": {
+    "url": "https://github.com/uber-web/uber-eslint/issues"
+  },
+  "author": {
+    "name": "Uber Web Platform Team"
+  },
+  "files": [
+    ".eslintrc.json"
+  ],
+  "main": ".eslintrc.json",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/uber-web/uber-eslint.git"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "devDependencies": {
+    "eslint-config-uber-es5": "^1.0.0",
+    "eslint-config-uber-es2015": "^1.0.0",
+    "eslint": "^2.3.0",
+    "eslint-plugin-react": "^5.0.0",
+    "tape": "^4.0.0"
+  },
+  "peerDependencies": {
+    "eslint-plugin-react": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.0"
+  },
+  "license": "MIT"
+}

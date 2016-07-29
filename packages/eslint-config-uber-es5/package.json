@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-uber-es5",
+  "version": "1.0.0",
+  "description": "The base eslint config for web JavaScript at Uber",
+  "keywords": [
+    "eslint",
+    "lint",
+    "uber-library",
+    "uber-web"
+  ],
+  "bugs": {
+    "url": "https://github.com/uber-web/uber-eslint/issues"
+  },
+  "author": {
+    "name": "Uber Web Platform Team"
+  },
+  "files": [
+    ".eslintrc.json"
+  ],
+  "main": ".eslintrc.json",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/uber-web/uber-eslint.git"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^2.0.0",
+    "tape": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.0"
+  },
+  "license": "MIT"
+}
