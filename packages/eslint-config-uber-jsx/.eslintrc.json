@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "eslint-config-uber-es5"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

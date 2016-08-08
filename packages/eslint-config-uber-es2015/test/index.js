@@ -3,6 +3,7 @@
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
+
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
@@ -46,15 +47,37 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint -c .eslintrc.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
+    // es2015 rules
     assert.ok(stderr.indexOf('prefer-const') >= 0,
-      'fails use strict rule');
+      'fails use prefer-const rule');
     assert.ok(stderr.indexOf('arrow-spacing') >= 0,
       'fails arrow-spacing rule');
     assert.ok(stderr.indexOf('no-var') >= 0,
       'fails the no-var rule');
+    // es5 rules
+    assert.ok(stderr.indexOf('quotes') >= 0,
+      'fails the quotes rule');
+    assert.ok(stderr.indexOf('camel_case') >= 0,
+      'fails the camel_case rule');
+    assert.ok(stderr.indexOf('sort-vars') >= 0,
+      'fails use sort-vars');
+    assert.end();
+  });
+});
+
+test('jsx integration - a failing lint', function t(assert) {
+  var lintFile = path.join(__dirname, 'fixtures/fail.js');
+  exec('eslint -c .eslintrc.jsx.json ' + lintFile, function onLint(err, stderr, stdout) {
+    assert.ok(err, 'exits with non-zero exit code');
+    stderr = stderr.toString();
+    // ensures that extending uber-jsx does not mangle uber-es2015 override
+    assert.ok(stderr.indexOf('camelcase') === -1,
+      'passes the camelcase rule');
+    assert.ok(stderr.indexOf('sort-vars') === -1,
+      'fails use sort-vars');
     assert.end();
   });
 });

@@ -18,5 +18,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-var something = "test";
+var b, a;
 let sq = p1=> p1*p1;
+var camel_case = "test";

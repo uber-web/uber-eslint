@@ -14,7 +14,8 @@ npm install --save-dev eslint
 
 Now that you have eslint installed, you can extend one or multiple of the eslint configs contained.
 
-There are three configs:
+There are three configs contained in this repo:
+
 * [eslint-config-uber-es5](packages/eslint-config-uber-es5)
 * [eslint-config-uber-es2015](packages/eslint-config-uber-es2015)
 * [eslint-config-uber-jsx](packages/eslint-config-uber-jsx)
@@ -30,7 +31,7 @@ npm install --save-dev eslint-config-uber-es5
 
 Initialize a `.eslintrc` file or append to an existing one.
 
-*You could also use a `.eslintrc.json` file instead*
+*Note: you can also configure eslint with [other types of config files](http://eslint.org/docs/user-guide/configuring#configuration-file-formats)*
 
 #### Before
 
@@ -43,19 +44,21 @@ Initialize a `.eslintrc` file or append to an existing one.
 
 #### After
 
-(Assuming you are writing es2015 (es6) JavaScript, you'd enable these two configs)
+Assuming you are writing es2015 jsx, you'd enable it like so:
 
 ```js
 {
   "rules": {},
   "extends": [
-    "eslint-config-uber-es5",
-    "eslint-config-uber-es2015"
+    "eslint-config-uber-es2015",
+    "eslint-config-uber-jsx"
   ]
 }
 ```
 
-You can also mix these configs together with external eslint configs.
+You can also mix these with external eslint configs.
+
+===
 
 See [eslint docs](http://eslint.org/) for more information.
 
