@@ -29,9 +29,8 @@
     "test": "node test/index.js"
   },
   "devDependencies": {
-    "eslint-config-uber-es5": "^1.0.0",
-    "eslint-config-uber-es2015": "^1.0.0",
     "eslint": "^2.3.0",
+    "eslint-config-uber-es2015": "^1.0.0",
     "eslint-plugin-react": "^5.0.0",
     "tape": "^4.0.0"
   },
@@ -42,5 +41,8 @@
     "node": ">=0.10.0",
     "npm": ">=2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-uber-es5": "^1.0.0"
+  }
 }

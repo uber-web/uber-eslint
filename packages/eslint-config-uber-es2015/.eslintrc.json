@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "eslint-config-uber-es5"
+  ],
   "env": {
     "es6": true
   },

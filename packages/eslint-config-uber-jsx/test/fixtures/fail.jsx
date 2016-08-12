@@ -18,14 +18,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-'use strict';
+undef = 'test';
 var unusedVar = 'test';
-export default function Something({ something }) {
-  return (
-    <test className='test'>{ something.test }</test>
-  );
-}
+var Something = React.createClass({
+  render: function render(something) {
+    return <div className='test'>{something.test}</div>;
+  }
+});
 
-City.propTypes = {
-  city: PropTypes.object.isRequired
+Something.propTypes = {
+  something: React.PropTypes.object.isRequired
 };

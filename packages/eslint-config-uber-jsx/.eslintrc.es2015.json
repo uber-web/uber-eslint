@@ -1,6 +1,5 @@
 {
   "extends": [
-    "eslint-config-uber-es5",
     "eslint-config-uber-es2015",
     ".eslintrc.json"
   ]

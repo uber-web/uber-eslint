@@ -18,14 +18,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import React, {PropTypes} from 'react';
+'use strict';
+var React = require('react');
 
-export default function Something({something}) {
-  return (
-    <div className="test">{something.test}</div>
-  );
-}
+var Something = React.createClass({
+  render: function render(something) {
+    return <div className="test">{something.test}</div>;
+  }
+});
 
 Something.propTypes = {
-  something: PropTypes.object.isRequired
+  something: React.PropTypes.object.isRequired
 };

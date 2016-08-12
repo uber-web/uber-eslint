@@ -20,18 +20,14 @@ npm install --save-dev eslint-config-uber-es2015
 
 Initialize a `.eslintrc` file or append to an existing one.
 
-*Note: you can also use a `.eslintrc.json` file instead*
+*Note: you can also configure eslint with [other types of config files](http://eslint.org/docs/user-guide/configuring#configuration-file-formats)*
 
 #### Before
-
-*You'll want to extend from `eslint-config-uber-base` first since some es2015 rules depend on the base rules.*
 
 ```js
 {
   "rules": {},
-  "extends": [
-    "eslint-config-uber-base"
-  ]
+  "extends": []
 }
 ```
 
@@ -41,13 +37,17 @@ Initialize a `.eslintrc` file or append to an existing one.
 {
   "rules": {},
   "extends": [
-    "eslint-config-uber-base",
     "eslint-config-uber-es2015"
   ]
 }
 ```
 
-See [eslint docs](http://eslint.org/) for more information.
+*`eslint-config-uber-es5` is already included, so there's no need to extend it.*
+
+===
+
+[:back: to uber-eslint home](../../README.md)
+
 
 [npm-image]: https://badge.fury.io/js/eslint-config--uber-es2015.svg
 [npm-url]: https://npmjs.org/package/eslint-config-uber-es2015
