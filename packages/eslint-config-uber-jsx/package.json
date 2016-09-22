@@ -35,7 +35,7 @@
     "tape": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-react": "^5.0.0"
+    "eslint-plugin-react": "*"
   },
   "engines": {
     "node": ">=0.10.0",
