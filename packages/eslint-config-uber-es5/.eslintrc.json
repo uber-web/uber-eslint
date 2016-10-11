@@ -136,7 +136,7 @@
       "nofunc"
     ],
     "no-useless-call": 2,
-    "no-void": 0,
+    "no-void": 1,
     "no-var": 0,
     "prefer-const": 0,
     "no-warning-comments": [
@@ -334,13 +334,6 @@
     ],
     "strict": [2, "global"],
     "use-isnan": 2,
-    "valid-jsdoc": [
-      2,
-      {
-        "requireReturn": false,
-        "requireParamDescription": false
-      }
-    ],
     "valid-typeof": 2,
     "vars-on-top": 0,
     "wrap-iife": 2,

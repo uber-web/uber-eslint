@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-jsx",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The base jsx eslint config for web JavaScript at Uber",
   "keywords": [
     "eslint",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "eslint": "^2.3.0",
-    "eslint-config-uber-es2015": "^2.0.0",
+    "eslint-config-uber-es2015": "^2.0.1",
     "eslint-plugin-react": "^5.0.0",
     "tape": "^4.0.0"
   },
@@ -43,6 +43,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "eslint-config-uber-es5": "^1.0.1"
+    "eslint-config-uber-es5": "^1.0.2"
   }
 }
