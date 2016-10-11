@@ -11,9 +11,6 @@
     "experimentalObjectRestSpread": true
   },
   "rules": {
-    "block-scoped-var": 0,
-    "no-extra-parens": 0,
-    "camelcase": 0,
     "jsx-quotes": [2, "prefer-double"],
     "react/jsx-no-undef": 2,
     "react/no-unknown-property": 2,
@@ -26,7 +23,24 @@
     "react/react-in-jsx-scope": 2,
     "react/self-closing-comp": 2,
     "react/sort-comp": 1,
-    "react/wrap-multilines": 2
+    "react/jsx-wrap-multilines": 2,
+    "react/display-name": 1,
+    "react/no-danger": 1,
+    "react/no-danger-with-children": 1,
+    "react/no-deprecated": 1,
+    "react/no-direct-mutation-state": 1,
+    "react/no-unknown-property": 1,
+    "react/jsx-indent": 1,
+    "react/jsx-no-literals": 1,
+    "react/jsx-no-target-blank": 1,
+    "react/jsx-no-undef": 1,
+    "react/jsx-wrap-multilines": 1,
+    "react/forbid-prop-types": [
+      1,
+      {
+        "forbid": ["any", "array"]
+      }
+    ]
   },
   "plugins": [
     "react"
