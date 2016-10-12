@@ -36,7 +36,8 @@
       {
         "forbid": ["any", "array"]
       }
-    ]
+    ],
+    "react/prefer-stateless-function": 1
   },
   "plugins": [
     "react"
