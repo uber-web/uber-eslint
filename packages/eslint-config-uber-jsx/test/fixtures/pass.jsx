@@ -21,11 +21,9 @@
 'use strict';
 var React = require('react');
 
-var Something = React.createClass({
-  render: function render(something) {
-    return <div className="test">{something.test}</div>;
-  }
-});
+function Something(something) {
+  return <div className="test">{something.test}</div>;
+}
 
 Something.propTypes = {
   something: React.PropTypes.object.isRequired
