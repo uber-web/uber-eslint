@@ -22,16 +22,12 @@
 var exec = require('child_process').exec;
 var path = require('path');
 var test = require('tape');
-var fs = require('fs');
 
 test('eslint file', function t(assert) {
-  var eslintFile = path.join(__dirname, '../.eslintrc.json');
-  fs.readFile(eslintFile, function onFile(err, data) {
-    assert.ifError(err, 'does not error reading file');
-    var file = JSON.parse(data);
-    assert.ok(file.rules, 'has top level rules definition');
-    assert.end();
-  });
+  var eslintFile = path.join(__dirname, '../.eslintrc.js');
+  var file = require(eslintFile);
+  assert.ok(file.rules, 'has top level rules definition');
+  assert.end();
 });
 
 test('a passing lint', function t(assert) {
@@ -67,7 +63,7 @@ test('a failing lint', function t(assert) {
 
 test('es2015 integration - a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.jsx');
-  exec('eslint -c .eslintrc.es2015.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c .eslintrc.es2015.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     // ensures that extending uber-es2015 does not mangle uber-jsx override

@@ -25,18 +25,15 @@ var test = require('tape');
 var fs = require('fs');
 
 test('eslint file', function t(assert) {
-  var eslintFile = path.join(__dirname, '../.eslintrc.json');
-  fs.readFile(eslintFile, function onFile(err, data) {
-    assert.ifError(err, 'does not error reading file');
-    var file = JSON.parse(data);
-    assert.ok(file.rules, 'has top level rules definition');
-    assert.end();
-  });
+  var eslintFile = path.join(__dirname, '../.eslintrc.js');
+  var file = require(eslintFile);
+  assert.ok(file.rules, 'has top level rules definition');
+  assert.end();
 });
 
 test('a passing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/pass.js');
-  exec('eslint -c .eslintrc.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ifError(err, 'does not error');
     assert.end();
   });
@@ -44,7 +41,7 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint -c .eslintrc.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     assert.ok(stderr.indexOf('strict') >= 0,
