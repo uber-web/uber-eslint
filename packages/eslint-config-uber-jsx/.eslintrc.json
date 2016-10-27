@@ -23,6 +23,7 @@
     "react/self-closing-comp": 2,
     "react/sort-comp": 1,
     "react/wrap-multilines": 2,
+    "react/display-name": 1,
     "react/no-danger": 1,
     "react/no-deprecated": 1,
     "react/no-direct-mutation-state": 1,
