@@ -18,13 +18,11 @@
     "react/jsx-uses-vars": 2,
     "react/no-did-mount-set-state": 1,
     "react/no-did-update-set-state": 1,
-    "react/no-multi-comp": 1,
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 2,
     "react/self-closing-comp": 2,
     "react/sort-comp": 1,
     "react/wrap-multilines": 2,
-    "react/display-name": 1,
     "react/no-danger": 1,
     "react/no-deprecated": 1,
     "react/no-direct-mutation-state": 1,
@@ -37,7 +35,7 @@
         "forbid": ["any", "array"]
       }
     ],
-    "react/prefer-stateless-function": 1
+    "no-invalid-this": 0
   },
   "plugins": [
     "react"
