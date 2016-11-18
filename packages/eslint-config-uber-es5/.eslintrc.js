@@ -24,7 +24,6 @@ module.exports = {
     "no-cond-assign": 2,
     "no-console": 2,
     "no-constant-condition": 2,
-    "no-continue": 0,
     "no-control-regex": 2,
     "no-debugger": 2,
     "no-delete-var": 2,
@@ -137,8 +136,6 @@ module.exports = {
     ],
     "no-useless-call": 2,
     "no-void": 1,
-    "no-var": 0,
-    "prefer-const": 0,
     "no-warning-comments": [
       0,
       {
@@ -156,7 +153,6 @@ module.exports = {
       2,
       "never"
     ],
-    "accessor-pairs": 0,
     "block-scoped-var": 2,
     "block-spacing": [2, "always"],
     "brace-style": [
@@ -193,7 +189,6 @@ module.exports = {
       2,
       "self"
     ],
-    "constructor-super": 0,
     "curly": [
       2,
       "all"
@@ -216,7 +211,6 @@ module.exports = {
       0,
       "declaration"
     ],
-    "generator-star-spacing": 0,
     "guard-for-in": 2,
     "handle-callback-err": [
       2,
@@ -233,10 +227,9 @@ module.exports = {
         "afterColon": true
       }
     ],
-    "lines-around-comment": 0,
     "max-depth": [
       2,
-      4
+      3
     ],
     "max-len": [
       2,
@@ -268,7 +261,6 @@ module.exports = {
       2,
       "never"
     ],
-    "object-shorthand": 0,
     "one-var": [
       2,
       "never"
@@ -282,7 +274,6 @@ module.exports = {
       "after"
     ],
     "padded-blocks": 0,
-    "quote-props": 0,
     "quotes": [
       2,
       "single"
@@ -296,7 +287,6 @@ module.exports = {
         "after": true
       }
     ],
-    "sort-vars": 0,
     "keyword-spacing": [
       2
     ],
@@ -337,7 +327,6 @@ module.exports = {
     "valid-typeof": 2,
     "vars-on-top": 0,
     "wrap-iife": 2,
-    "wrap-regex": 0,
     "yoda": [
       2,
       "never"

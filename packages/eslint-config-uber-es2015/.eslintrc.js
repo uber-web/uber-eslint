@@ -55,14 +55,6 @@ module.exports = {
         "allowBlockEnd": true
       }
     ],
-    "max-depth": [
-      2,
-      3
-    ],
-    "max-statements": [
-      2,
-      15
-    ],
     "object-shorthand": [
       2,
       "always"
