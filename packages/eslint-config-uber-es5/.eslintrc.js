@@ -1,4 +1,4 @@
-{
+module.exports = {
   "ecmaFeatures": {},
   "parser": "espree",
   "env": {
