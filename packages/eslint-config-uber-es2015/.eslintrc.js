@@ -1,4 +1,4 @@
-{
+module.exports = {
   "extends": [
     "eslint-config-uber-es5"
   ],
@@ -54,14 +54,6 @@
         "allowBlockStart": true,
         "allowBlockEnd": true
       }
-    ],
-    "max-depth": [
-      2,
-      3
-    ],
-    "max-statements": [
-      2,
-      15
     ],
     "object-shorthand": [
       2,
