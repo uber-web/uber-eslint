@@ -50,6 +50,8 @@ test('a failing lint', function t(assert) {
       'fails the quotes rule');
     assert.ok(stderr.indexOf('keyword-spacing') >= 0,
       'fails on the keyword spacing rule');
+    assert.ok(stderr.indexOf('no-undef') >= 0,
+      'fails on the no-undef rule');
     assert.end();
   });
 });

@@ -1,4 +1,7 @@
 module.exports = {
+  "extends": [
+    ".eslintrc-errors.js"
+  ],
   "ecmaFeatures": {},
   "parser": "espree",
   "env": {
@@ -16,35 +19,78 @@ module.exports = {
     "module": false
   },
   "rules": {
+    // http://eslint.org/docs/rules/no-alert
     "no-alert": 2,
+
+    // http://eslint.org/docs/rules/no-array-constructor
     "no-array-constructor": 2,
+
+    // http://eslint.org/docs/rules/no-bitwise
     "no-bitwise": 0,
-    "no-caller": 2,
-    "no-catch-shadow": 2,
+
+    // http://eslint.org/docs/rules/no-cond-assign
     "no-cond-assign": 2,
+
+    // http://eslint.org/docs/rules/no-console
+    // highly agreed upon
     "no-console": 2,
+
+    // http://eslint.org/docs/rules/no-constant-condition
     "no-constant-condition": 2,
+
+    // http://eslint.org/docs/rules/no-control-regex
     "no-control-regex": 2,
+
+    // http://eslint.org/docs/rules/no-debugger
+    // highly agreed upon
     "no-debugger": 2,
+
+    // http://eslint.org/docs/rules/no-delete-var
     "no-delete-var": 2,
+
+    // http://eslint.org/docs/rules/no-div-regex
     "no-div-regex": 2,
-    "no-dupe-keys": 2,
-    "no-dupe-args": 2,
-    "no-duplicate-case": 2,
+
+    // http://eslint.org/docs/rules/no-else-return
     "no-else-return": 2,
+
+    // http://eslint.org/docs/rules/no-empty
+    // highly agreed upon
     "no-empty": 2,
+
+    // http://eslint.org/docs/rules/no-empty-character-class
     "no-empty-character-class": 2,
+
+    // http://eslint.org/docs/rules/no-labels
     "no-labels": 2,
-    "no-eq-null": 2,
+
+    // http://eslint.org/docs/rules/no-eval
+    // highly agreed upon
     "no-eval": 2,
-    "no-ex-assign": 2,
-    "no-extend-native": 2,
+
+    // http://eslint.org/docs/rules/no-extra-bind
+    // highly agreed upon
     "no-extra-bind": 2,
+
+    // http://eslint.org/docs/rules/no-extra-boolean-cast
+    // highly agreed upon
     "no-extra-boolean-cast": 2,
+
+    // http://eslint.org/docs/rules/no-extra-parens
     "no-extra-parens": [2, "functions"],
+
+    // http://eslint.org/docs/rules/no-extra-semi
+    // highly agreed upon
     "no-extra-semi": 2,
+
+    // http://eslint.org/docs/rules/no-fallthrough
+    // highly agreed upon
     "no-fallthrough": 2,
+
+    // http://eslint.org/docs/rules/no-floating-decimal
     "no-floating-decimal": 2,
+
+
     "no-func-assign": 2,
     "no-implicit-coercion": 2,
     "no-implied-eval": 2,
@@ -115,7 +161,6 @@ module.exports = {
     "no-ternary": 0,
     "no-trailing-spaces": 2,
     "no-throw-literal": 2,
-    "no-undef": 2,
     "no-undef-init": 2,
     "no-undefined": 0,
     "no-unexpected-multiline": 2,

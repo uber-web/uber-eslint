@@ -21,4 +21,5 @@
 var something = "yay";
 if(true){
   console.log('should fail');
+  alert('hello world');
 }
