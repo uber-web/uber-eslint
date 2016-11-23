@@ -28,22 +28,8 @@ module.exports = {
     // http://eslint.org/docs/rules/no-bitwise
     "no-bitwise": 0,
 
-    // http://eslint.org/docs/rules/no-cond-assign
-    "no-cond-assign": 2,
-
-    // http://eslint.org/docs/rules/no-console
-    // highly agreed upon
-    "no-console": 2,
-
-    // http://eslint.org/docs/rules/no-constant-condition
-    "no-constant-condition": 2,
-
-    // http://eslint.org/docs/rules/no-control-regex
-    "no-control-regex": 2,
-
-    // http://eslint.org/docs/rules/no-debugger
-    // highly agreed upon
-    "no-debugger": 2,
+    // http://eslint.org/docs/rules/no-caller
+    "no-caller": 2,
 
     // http://eslint.org/docs/rules/no-delete-var
     "no-delete-var": 2,
@@ -54,12 +40,11 @@ module.exports = {
     // http://eslint.org/docs/rules/no-else-return
     "no-else-return": 2,
 
-    // http://eslint.org/docs/rules/no-empty
-    // highly agreed upon
-    "no-empty": 2,
+    // http://eslint.org/docs/rules/no-eq-null
+    "no-eq-null": 2,
 
-    // http://eslint.org/docs/rules/no-empty-character-class
-    "no-empty-character-class": 2,
+    // http://eslint.org/docs/rules/no-extend-native
+    "no-extend-native": 2,
 
     // http://eslint.org/docs/rules/no-labels
     "no-labels": 2,
@@ -72,17 +57,6 @@ module.exports = {
     // highly agreed upon
     "no-extra-bind": 2,
 
-    // http://eslint.org/docs/rules/no-extra-boolean-cast
-    // highly agreed upon
-    "no-extra-boolean-cast": 2,
-
-    // http://eslint.org/docs/rules/no-extra-parens
-    "no-extra-parens": [2, "functions"],
-
-    // http://eslint.org/docs/rules/no-extra-semi
-    // highly agreed upon
-    "no-extra-semi": 2,
-
     // http://eslint.org/docs/rules/no-fallthrough
     // highly agreed upon
     "no-fallthrough": 2,
@@ -90,18 +64,10 @@ module.exports = {
     // http://eslint.org/docs/rules/no-floating-decimal
     "no-floating-decimal": 2,
 
-
-    "no-func-assign": 2,
     "no-implicit-coercion": 2,
     "no-implied-eval": 2,
     "no-inline-comments": 2,
-    "no-inner-declarations": [
-      2,
-      "functions"
-    ],
-    "no-invalid-regexp": 2,
     "no-invalid-this": 2,
-    "no-irregular-whitespace": 2,
     "no-iterator": 2,
     "no-label-var": 2,
     "no-labels": 2,
@@ -136,7 +102,6 @@ module.exports = {
     "no-new-object": 2,
     "no-new-require": 2,
     "no-new-wrappers": 2,
-    "no-obj-calls": 2,
     "no-octal": 2,
     "no-octal-escape": 2,
     "no-param-reassign": 0,
@@ -146,7 +111,6 @@ module.exports = {
     "no-process-exit": 2,
     "no-proto": 2,
     "no-redeclare": 2,
-    "no-regex-spaces": 2,
     "no-reserved-keys": 0,
     "no-restricted-modules": 0,
     "no-return-assign": 2,
@@ -156,17 +120,14 @@ module.exports = {
     "no-shadow": 2,
     "no-shadow-restricted-names": 2,
     "no-spaced-func": 2,
-    "no-sparse-arrays": 2,
     "no-sync": 0,
     "no-ternary": 0,
     "no-trailing-spaces": 2,
     "no-throw-literal": 2,
     "no-undef-init": 2,
     "no-undefined": 0,
-    "no-unexpected-multiline": 2,
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 2,
-    "no-unreachable": 2,
     "no-unused-expressions": 2,
     "no-unused-vars": [
       2,
@@ -368,8 +329,6 @@ module.exports = {
       }
     ],
     "strict": [2, "global"],
-    "use-isnan": 2,
-    "valid-typeof": 2,
     "vars-on-top": 0,
     "wrap-iife": 2,
     "yoda": [
