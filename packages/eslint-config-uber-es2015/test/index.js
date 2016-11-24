@@ -26,14 +26,14 @@ var test = require('tape');
 var fs = require('fs');
 
 test('eslint file', function t(assert) {
-  var file = require('../.eslintrc.js');
-  assert.ok(file.rules, 'has top level rules definition');
+  var file = require('../eslintrc.js');
+  assert.ok(file.extends, 'has top level extends definition');
   assert.end();
 });
 
 test('a passing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/pass.js');
-  exec('eslint -c .eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ifError(err, 'does not error');
     assert.equal(stderr.toString(), '',
       'passes all linting');
@@ -43,7 +43,7 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     // es2015 rules
@@ -66,7 +66,7 @@ test('a failing lint', function t(assert) {
 
 test('jsx integration - a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint -c .eslintrc.jsx.js ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.jsx.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     // ensures that extending uber-jsx does not mangle uber-es2015 override

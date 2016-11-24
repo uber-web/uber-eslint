@@ -17,9 +17,9 @@
     "name": "Uber Web Platform Team"
   },
   "files": [
-    ".eslintrc.js"
+    "eslintrc.js"
   ],
-  "main": ".eslintrc.js",
+  "main": "eslintrc.js",
   "repository": {
     "type": "git",
     "url": "git@github.com/uber-web/uber-eslint.git"

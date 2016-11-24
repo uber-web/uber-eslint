@@ -95,55 +95,6 @@ module.exports = {
 
     "valid-jsdoc": 0,
 
-    "valid-typeof": 2,
-
-    /**
-    * Variables Section from http://eslint.org/docs/rules/
-    */
-    // ie8- bug
-    // http://eslint.org/docs/rules/no-catch-shadow
-    // category: variables
-    "no-catch-shadow": 2,
-
-
-    "no-undef": 2
+    "valid-typeof": 2
   }
 }
-/*
-init-declarations
-require or disallow initialization in variable declarations
-
-no-catch-shadow
-disallow catch clause parameters from shadowing variables in the outer scope
-
-no-delete-var
-disallow deleting variables
-
-no-label-var
-disallow labels that share a name with a variable
-
-no-restricted-globals
-disallow specified global variables
-
-no-shadow-restricted-names
-disallow identifiers from shadowing restricted names
-
-no-shadow
-disallow variable declarations from shadowing variables declared in the outer scope
-
-no-undef-init
-disallow initializing variables to undefined
-
-no-undef
-disallow the use of undeclared variables unless mentioned in
-
-no-undefined
-disallow the use of undefined as an identifier
-
-no-unused-vars
-disallow unused variables
-
-no-use-before-define
-disallow the use of variables before they are defined
-
-*/

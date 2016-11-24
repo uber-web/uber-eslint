@@ -1,19 +1,7 @@
-module.exports = {
-  "extends": [
-    "eslint-config-uber-es5"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true
-  },
+{
   "rules": {
-    "jsx-quotes": [2, "prefer-double"],
     "react/jsx-no-undef": 2,
-    "react/no-unknown-property": 2,
+    "react/no-unknown-property": 1,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/no-did-mount-set-state": 1,
@@ -27,18 +15,19 @@ module.exports = {
     "react/no-danger": 1,
     "react/no-deprecated": 1,
     "react/no-direct-mutation-state": 1,
-    "react/no-unknown-property": 1,
-    "react/jsx-indent": [1, 2],
+    "react/jsx-indent": [
+      1,
+      2
+    ],
     "react/jsx-no-target-blank": 1,
     "react/forbid-prop-types": [
       1,
       {
-        "forbid": ["any", "array"]
+        "forbid": [
+          "any",
+          "array"
+        ]
       }
-    ],
-    "no-invalid-this": 0
-  },
-  "plugins": [
-    "react"
-  ]
+    ]
+  }
 }

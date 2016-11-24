@@ -24,14 +24,14 @@ var path = require('path');
 var test = require('tape');
 
 test('eslint file', function t(assert) {
-  var file = require('../.eslintrc.js');
-  assert.ok(file.rules, 'has top level rules definition');
+  var file = require('../eslintrc.js');
+  assert.ok(file.extends, 'has top level extends definition');
   assert.end();
 });
 
 test('a passing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/pass.js');
-  exec('eslint -c .eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ifError(err, 'does not error');
     assert.end();
   });
@@ -39,7 +39,7 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint -c .eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     assert.ok(stderr.indexOf('strict') >= 0,
