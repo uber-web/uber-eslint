@@ -42,16 +42,35 @@ test('a failing lint', function t(assert) {
   exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
+
+    // from best-practices
+    assert.ok(stderr.indexOf('no-alert') >= 0,
+      'fails no-alert rule');
+
+    // from errors
+    assert.ok(stderr.indexOf('no-cond-assign') >= 0,
+      'fails no-cond-assign rule');
+
+    // from miscellaneous
+    assert.ok(stderr.indexOf('no-native-reassign') >= 0,
+      'fails no-native-reassign rule');
+
+    // from strict-mode
     assert.ok(stderr.indexOf('strict') >= 0,
-      'fails use strict rule');
+      'fails strict rule');
+
+    // from stylistic-issues
+    assert.ok(stderr.indexOf('quotes') >= 0,
+      'fails quotes rule');
+    assert.ok(stderr.indexOf('keyword-spacing') >= 0,
+      'fails keyword-spacing rule');
+
+    // from variables
     assert.ok(stderr.indexOf('no-unused-vars') >= 0,
       'fails no-unused-vars rule');
-    assert.ok(stderr.indexOf('quotes') >= 0,
-      'fails the quotes rule');
-    assert.ok(stderr.indexOf('keyword-spacing') >= 0,
-      'fails on the keyword spacing rule');
     assert.ok(stderr.indexOf('no-undef') >= 0,
-      'fails on the no-undef rule');
+      'fails no-undef rule');
+
     assert.end();
   });
 });
