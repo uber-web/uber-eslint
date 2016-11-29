@@ -27,7 +27,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.0.0",
+    "eslint": "^3.11.1",
     "tape": "^4.0.0"
   },
   "peerDependencies": {

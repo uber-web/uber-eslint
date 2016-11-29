@@ -44,18 +44,25 @@ test('a failing lint', function t(assert) {
   exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
-    assert.ok(stderr.indexOf('strict') >= 0,
-      'fails strict rule');
-    assert.ok(stderr.indexOf('eol-last') >= 0,
-      'fails eol-last rule');
+
+    // miscellaneous
     assert.ok(stderr.indexOf('react/react-in-jsx-scope') >= 0,
       'fails react/react-in-jsx-scope rule');
+    assert.ok(stderr.indexOf('react/jsx-no-undef') >= 0,
+      'fails react/jsx-no-undef');
+
+    // stylistic-issues
     assert.ok(stderr.indexOf('jsx-quotes') >= 0,
       'fails the jsx-quotes rule');
+
+    // testing es5 rules contained
+    assert.ok(stderr.indexOf('strict') >= 0,
+      'fails strict rule');
     assert.ok(stderr.indexOf('no-undef') >= 0,
       'fails the no-undef rule');
     assert.ok(stderr.indexOf('no-unused-vars') >= 0,
       'fails the no-unused-vars rule');
+
     assert.end();
   });
 });

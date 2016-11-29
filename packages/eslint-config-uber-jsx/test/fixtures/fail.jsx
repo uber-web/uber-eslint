@@ -22,7 +22,11 @@ undef = 'test';
 var unusedVar = 'test';
 var Something = React.createClass({
   render: function render(something) {
-    return <div className='test'>{something.test}</div>;
+    return (
+    <div className='test'>
+      <NotFoundComponent/>
+      {something.test}
+    </div>);
   }
 });
 
