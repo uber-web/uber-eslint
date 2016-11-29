@@ -46,13 +46,26 @@ test('a failing lint', function t(assert) {
   exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
+
     // es2015 rules
+    // best-practices
+    assert.ok(stderr.indexOf('accessor-pairs') >= 0,
+      'fails use accessor-pairs rule');
+
+    // ecmascript-6
     assert.ok(stderr.indexOf('prefer-const') >= 0,
       'fails use prefer-const rule');
     assert.ok(stderr.indexOf('arrow-spacing') >= 0,
       'fails arrow-spacing rule');
     assert.ok(stderr.indexOf('no-var') >= 0,
       'fails the no-var rule');
+
+    // miscellaneous
+
+    // stylistic-issues
+    assert.ok(stderr.indexOf('no-continue') >= 0,
+      'fails the no-continue rule');
+
     // es5 rules
     assert.ok(stderr.indexOf('quotes') >= 0,
       'fails the quotes rule');

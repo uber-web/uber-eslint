@@ -21,3 +21,13 @@
 var b, a;
 let sq = p1=> p1*p1;
 var camel_case = "test";
+
+for (let i = 0; i < 10; i++) {
+  continue;
+}
+
+var o = {
+  get a() {
+    return this.val;
+  }
+};

@@ -28,13 +28,15 @@
     "test": "node test/index.js"
   },
   "devDependencies": {
-    "eslint": "^2.0.0",
+    "eslint": "^3.11.1",
     "eslint-config-uber-jsx": "^2.0.3",
     "tape": "^4.0.0"
   },
+  "peerDependencies": {
+    "eslint": "^3.11.1"
+  },
   "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=2.0"
+    "node": ">=4.0.0"
   },
   "license": "MIT",
   "dependencies": {

@@ -29,17 +29,17 @@
     "test": "node test/index.js"
   },
   "devDependencies": {
-    "eslint": "^2.3.0",
+    "eslint": "^3.11.1",
     "eslint-config-uber-es2015": "^2.0.3",
-    "eslint-plugin-react": "^5.0.0",
+    "eslint-plugin-react": "^6.7.1",
     "tape": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-react": "*"
+    "eslint-plugin-react": "*",
+    "eslint": "^2.0.0"
   },
   "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=2.0"
+    "node": ">=4.0.0"
   },
   "license": "MIT",
   "dependencies": {
