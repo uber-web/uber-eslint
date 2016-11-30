@@ -20,7 +20,7 @@
 
 'use strict';
 module.exports = {
-  'extends': [
+  extends: [
     './best-practices.json',
     './errors.js',
     './miscellaneous.json',
@@ -29,7 +29,6 @@ module.exports = {
     './stylistic-issues.json',
     './variables.json'
   ],
-  'ecmaFeatures': {},
   'parser': 'espree',
   'env': {
     'browser': false,
