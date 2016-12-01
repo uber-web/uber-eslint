@@ -17,9 +17,9 @@
     "name": "Uber Web Platform Team"
   },
   "files": [
-    ".eslintrc.json"
+    "eslintrc.js"
   ],
-  "main": ".eslintrc.json",
+  "main": "eslintrc.js",
   "repository": {
     "type": "git",
     "url": "git@github.com/uber-web/uber-eslint.git"
@@ -28,13 +28,15 @@
     "test": "node test/index.js"
   },
   "devDependencies": {
-    "eslint": "^2.0.0",
+    "eslint": "^3.11.1",
     "eslint-config-uber-jsx": "^2.0.3",
     "tape": "^4.0.0"
   },
+  "peerDependencies": {
+    "eslint": "^3.0.0"
+  },
   "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=2.0"
+    "node": ">=4.0.0"
   },
   "license": "MIT",
   "dependencies": {

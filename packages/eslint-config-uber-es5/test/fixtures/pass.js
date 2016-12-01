@@ -19,7 +19,6 @@
 // THE SOFTWARE.
 
 'use strict';
-
 var something = 'yay';
 
 module.exports = something;

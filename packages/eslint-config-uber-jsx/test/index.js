@@ -22,21 +22,16 @@
 var exec = require('child_process').exec;
 var path = require('path');
 var test = require('tape');
-var fs = require('fs');
 
 test('eslint file', function t(assert) {
-  var eslintFile = path.join(__dirname, '../.eslintrc.json');
-  fs.readFile(eslintFile, function onFile(err, data) {
-    assert.ifError(err, 'does not error reading file');
-    var file = JSON.parse(data);
-    assert.ok(file.rules, 'has top level rules definition');
-    assert.end();
-  });
+  var file = require('../eslintrc.js');
+  assert.ok(file.extends, 'has top level extends definition');
+  assert.end();
 });
 
 test('a passing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/pass.jsx');
-  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ifError(err, 'does not error');
     assert.equal(stderr.toString(), '',
       'passes all linting');
@@ -46,28 +41,35 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.jsx');
-  exec('eslint ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
-    assert.ok(stderr.indexOf('strict') >= 0,
-      'fails strict rule');
-    assert.ok(stderr.indexOf('eol-last') >= 0,
-      'fails eol-last rule');
+
+    // miscellaneous
     assert.ok(stderr.indexOf('react/react-in-jsx-scope') >= 0,
       'fails react/react-in-jsx-scope rule');
+    assert.ok(stderr.indexOf('react/jsx-no-undef') >= 0,
+      'fails react/jsx-no-undef');
+
+    // stylistic-issues
     assert.ok(stderr.indexOf('jsx-quotes') >= 0,
       'fails the jsx-quotes rule');
+
+    // testing es5 rules contained
+    assert.ok(stderr.indexOf('strict') >= 0,
+      'fails strict rule');
     assert.ok(stderr.indexOf('no-undef') >= 0,
       'fails the no-undef rule');
     assert.ok(stderr.indexOf('no-unused-vars') >= 0,
       'fails the no-unused-vars rule');
+
     assert.end();
   });
 });
 
 test('es2015 integration - a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.jsx');
-  exec('eslint -c .eslintrc.es2015.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.es2015.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
     // ensures that extending uber-es2015 does not mangle uber-jsx override

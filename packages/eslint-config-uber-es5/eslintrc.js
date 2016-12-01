@@ -18,18 +18,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-undef = 'test';
-var unusedVar = 'test';
-var Something = React.createClass({
-  render: function render(something) {
-    return (
-    <div className='test'>
-      <NotFoundComponent/>
-      {something.test}
-    </div>);
+'use strict';
+module.exports = {
+  extends: [
+    './best-practices.json',
+    './errors.js',
+    './miscellaneous.json',
+    './node-js-and-common-js.json',
+    './strict-mode.json',
+    './stylistic-issues.json',
+    './variables.json'
+  ],
+  'parser': 'espree',
+  'env': {
+    'browser': false,
+    'node': false,
+    'amd': false,
+    'mocha': false,
+    'jasmine': false,
+    'es6': false
+  },
+  'globals': {
+    '__dirname': false,
+    '__filename': false,
+    'require': false,
+    'module': false
   }
-});
-
-Something.propTypes = {
-  something: React.PropTypes.object.isRequired
 };

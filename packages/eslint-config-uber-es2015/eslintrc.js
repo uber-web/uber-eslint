@@ -18,18 +18,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-undef = 'test';
-var unusedVar = 'test';
-var Something = React.createClass({
-  render: function render(something) {
-    return (
-    <div className='test'>
-      <NotFoundComponent/>
-      {something.test}
-    </div>);
+module.exports = {
+  extends: [
+    './best-practices.json',
+    './ecmascript-6.json',
+    './miscellaneous.json',
+    './stylistic-issues.json',
+    'eslint-config-uber-es5'
+  ],
+  env: {
+    es6: true
+  },
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
   }
-});
-
-Something.propTypes = {
-  something: React.PropTypes.object.isRequired
 };

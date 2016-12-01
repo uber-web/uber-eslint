@@ -4,10 +4,10 @@
 
 ## Installation
 
-Install [eslint](https://www.github.com/eslint/eslint) either locally or globally.
+Install [eslint](https://www.github.com/eslint/eslint) and [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) either locally or globally.
 
 ```sh
-npm install --save-dev eslint
+npm install --save-dev eslint eslint-plugin-react
 ```
 
 If you installed `eslint` locally, you should install `eslint-config-uber-jsx` locally too. Otherwise, install it globally.

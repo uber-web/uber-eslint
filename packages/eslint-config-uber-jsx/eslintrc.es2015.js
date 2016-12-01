@@ -18,18 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-undef = 'test';
-var unusedVar = 'test';
-var Something = React.createClass({
-  render: function render(something) {
-    return (
-    <div className='test'>
-      <NotFoundComponent/>
-      {something.test}
-    </div>);
-  }
-});
-
-Something.propTypes = {
-  something: React.PropTypes.object.isRequired
-};
+module.exports = {
+  "extends": [
+    "eslint-config-uber-es2015",
+    "./eslintrc.js"
+  ]
+}

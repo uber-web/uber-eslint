@@ -19,6 +19,12 @@
 // THE SOFTWARE.
 
 var something = "yay";
+var x = 1;
+Object = null;
+if (x = 0) {
+  alert('don\'t alert');
+}
 if(true){
-  console.log('should fail');
+  console.log('should ${fail}');
+  alert('hello world');
 }

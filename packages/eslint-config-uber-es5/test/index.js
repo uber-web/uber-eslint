@@ -22,21 +22,16 @@
 var exec = require('child_process').exec;
 var path = require('path');
 var test = require('tape');
-var fs = require('fs');
 
 test('eslint file', function t(assert) {
-  var eslintFile = path.join(__dirname, '../.eslintrc.json');
-  fs.readFile(eslintFile, function onFile(err, data) {
-    assert.ifError(err, 'does not error reading file');
-    var file = JSON.parse(data);
-    assert.ok(file.rules, 'has top level rules definition');
-    assert.end();
-  });
+  var file = require('../eslintrc.js');
+  assert.ok(file.extends, 'has top level extends definition');
+  assert.end();
 });
 
 test('a passing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/pass.js');
-  exec('eslint -c .eslintrc.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ifError(err, 'does not error');
     assert.end();
   });
@@ -44,17 +39,40 @@ test('a passing lint', function t(assert) {
 
 test('a failing lint', function t(assert) {
   var lintFile = path.join(__dirname, 'fixtures/fail.js');
-  exec('eslint -c .eslintrc.json ' + lintFile, function onLint(err, stderr, stdout) {
+  exec('eslint -c eslintrc.js ' + lintFile, function onLint(err, stderr, stdout) {
     assert.ok(err, 'exits with non-zero exit code');
     stderr = stderr.toString();
+
+    // from best-practices
+    assert.ok(stderr.indexOf('no-alert') >= 0,
+      'fails no-alert rule');
+
+    // from errors
+    assert.ok(stderr.indexOf('no-cond-assign') >= 0,
+      'fails no-cond-assign rule');
+    assert.ok(stderr.indexOf('no-template-curly-in-string') >= 0,
+      'fails no-template-curly-in-string rule');
+
+    // from miscellaneous
+    assert.ok(stderr.indexOf('no-native-reassign') >= 0,
+      'fails no-native-reassign rule');
+
+    // from strict-mode
     assert.ok(stderr.indexOf('strict') >= 0,
-      'fails use strict rule');
+      'fails strict rule');
+
+    // from stylistic-issues
+    assert.ok(stderr.indexOf('quotes') >= 0,
+      'fails quotes rule');
+    assert.ok(stderr.indexOf('keyword-spacing') >= 0,
+      'fails keyword-spacing rule');
+
+    // from variables
     assert.ok(stderr.indexOf('no-unused-vars') >= 0,
       'fails no-unused-vars rule');
-    assert.ok(stderr.indexOf('quotes') >= 0,
-      'fails the quotes rule');
-    assert.ok(stderr.indexOf('keyword-spacing') >= 0,
-      'fails on the keyword spacing rule');
+    assert.ok(stderr.indexOf('no-undef') >= 0,
+      'fails no-undef rule');
+
     assert.end();
   });
 });
