@@ -17,9 +17,6 @@
   "author": {
     "name": "Uber Web Platform Team"
   },
-  "files": [
-    "eslintrc.js"
-  ],
   "main": "eslintrc.js",
   "repository": {
     "type": "git",
