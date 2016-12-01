@@ -97,8 +97,7 @@ module.exports = {
     "no-sparse-arrays": 2,
 
     // http://eslint.org/docs/rules/no-template-curly-in-string
-    // not available in this lower version of eslint
-    // "no-template-curly-in-string": 2,
+    "no-template-curly-in-string": 2,
 
     "no-unexpected-multiline": 2,
 
@@ -108,8 +107,7 @@ module.exports = {
     "no-unsafe-finally": 2,
 
     // http://eslint.org/docs/rules/no-unsafe-negation
-    // not available in this lower version of eslint
-    // "no-unsafe-negation": 2,
+    "no-unsafe-negation": 2,
 
     "use-isnan": 2,
 

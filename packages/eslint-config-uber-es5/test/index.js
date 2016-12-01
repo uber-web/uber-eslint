@@ -50,6 +50,8 @@ test('a failing lint', function t(assert) {
     // from errors
     assert.ok(stderr.indexOf('no-cond-assign') >= 0,
       'fails no-cond-assign rule');
+    assert.ok(stderr.indexOf('no-template-curly-in-string') >= 0,
+      'fails no-template-curly-in-string rule');
 
     // from miscellaneous
     assert.ok(stderr.indexOf('no-native-reassign') >= 0,
