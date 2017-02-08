@@ -1,5 +1,6 @@
 {
   "rules": {
+    "no-class-assign": 2,
     "arrow-spacing": [
       1,
       {
