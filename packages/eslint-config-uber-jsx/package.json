@@ -28,7 +28,7 @@
   "devDependencies": {
     "eslint": "^3.11.1",
     "eslint-config-uber-es2015": "^3.0.1",
-    "eslint-plugin-react": "^6.7.1",
+    "eslint-plugin-react": "^6.10.0",
     "tape": "^4.0.0"
   },
   "peerDependencies": {
