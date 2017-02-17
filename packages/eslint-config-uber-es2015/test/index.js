@@ -59,6 +59,8 @@ test('a failing lint', function t(assert) {
       'fails arrow-spacing rule');
     assert.ok(stderr.indexOf('no-var') >= 0,
       'fails the no-var rule');
+    assert.ok(stderr.indexOf('arrow-spacing') >= 0,
+      'fails the arrow-spacing rule');
 
     // miscellaneous
 

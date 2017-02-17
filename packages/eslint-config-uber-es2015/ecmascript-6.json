@@ -1,6 +1,13 @@
 {
   "rules": {
     "no-class-assign": 2,
+    "arrow-spacing": [
+      1,
+      {
+        "before": true,
+        "after": true
+      }
+    ],
     "no-const-assign": 2,
     "no-dupe-class-members": 2,
     "no-this-before-super": 2,
