@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-jsx",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "The base jsx eslint config for web JavaScript at Uber",
   "keywords": [
     "eslint",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^3.11.1",
-    "eslint-config-uber-es2015": "^3.0.1",
+    "eslint-config-uber-es2015": "^3.1.0",
     "eslint-plugin-react": "^6.10.0",
     "tape": "^4.0.0"
   },
