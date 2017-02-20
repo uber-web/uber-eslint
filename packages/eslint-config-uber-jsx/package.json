@@ -28,11 +28,9 @@
   "devDependencies": {
     "eslint": "^3.11.1",
     "eslint-config-uber-es2015": "^3.0.1",
-    "eslint-plugin-react": "^6.7.1",
     "tape": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-react": "*",
     "eslint": "^3.0.0"
   },
   "engines": {
@@ -40,6 +38,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "eslint-config-uber-es5": "^2.0.1"
+    "eslint-config-uber-es5": "^2.0.1",
+    "eslint-plugin-react": "^6.7.1"
   }
 }
