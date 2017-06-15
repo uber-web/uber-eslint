@@ -30,7 +30,7 @@
     "tape": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint": "^3.0.0"
+    "eslint": ">= 3.0.0 < 5"
   },
   "engines": {
     "node": ">=4.0.0"
