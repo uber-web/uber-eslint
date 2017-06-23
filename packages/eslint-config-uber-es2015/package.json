@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-es2015",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The base es2015 eslint config for web JavaScript at Uber",
   "keywords": [
     "es6",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^3.11.1",
-    "eslint-config-uber-jsx": "^3.0.1",
+    "eslint-config-uber-jsx": "^3.3.1",
     "tape": "^4.0.0"
   },
   "peerDependencies": {
@@ -37,6 +37,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "eslint-config-uber-es5": "^2.0.1"
+    "eslint-config-uber-es5": "^2.0.2"
   }
 }

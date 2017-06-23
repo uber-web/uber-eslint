@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-es5",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The base eslint config for web JavaScript at Uber",
   "keywords": [
     "eslint",
