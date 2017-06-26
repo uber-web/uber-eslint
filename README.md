@@ -50,8 +50,8 @@ Assuming you are writing es2015 jsx, you'd enable it like so:
 {
   "rules": {},
   "extends": [
-    "eslint-config-uber-es2015",
-    "eslint-config-uber-jsx"
+    "eslint-config-uber-jsx",
+    "eslint-config-uber-es2015"
   ]
 }
 ```
