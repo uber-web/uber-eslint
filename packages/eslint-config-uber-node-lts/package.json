@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-node-lts",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "ESlint config for Node LTS",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
   "bugs": {
@@ -15,7 +15,7 @@
   },
   "main": "eslintrc.js",
   "dependencies": {
-    "eslint-config-uber-base": "^1.0.0-rc.2"
+    "eslint-config-uber-base": "^1.0.0-rc.3"
   },
   "peerDependencies": {
     "eslint": "^4.0.0"

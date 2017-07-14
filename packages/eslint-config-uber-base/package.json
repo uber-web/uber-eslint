@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-base",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Base ESlint config",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
   "bugs": {
@@ -14,8 +14,6 @@
     "test": "echo ok"
   },
   "main": "eslintrc.js",
-  "dependencies": {
-  },
   "peerDependencies": {
     "eslint": "^4.0.0",
     "eslint-plugin-prettier": "^2.0.0"
