@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-node-stage-3",
-  "version": "0.0.0",
+  "version": "1.0.0-rc.1",
   "description": "ESlint config for Node with Stage 3+ JS",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
   "scripts": {
@@ -8,12 +8,11 @@
   },
   "main": "eslintrc.js",
   "dependencies": {
-    "eslint-config-uber-base-stage-3": "^0.0.0"
+    "eslint-config-uber-base-stage-3": "^1.0.0-rc.1"
   },
   "peerDependencies": {
     "eslint": "^4.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">= 6"
   },
