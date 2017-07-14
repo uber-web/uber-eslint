@@ -3,6 +3,13 @@
   "version": "1.0.0-rc.1",
   "description": "ESlint config for Stage 3+ universal JS",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
+  "bugs": {
+    "url": "https://github.com/uber-web/uber-eslint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:uber-web/uber-eslint"
+  },
   "scripts": {
     "test": "echo ok"
   },
