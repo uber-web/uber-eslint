@@ -15,10 +15,10 @@
   },
   "main": "eslintrc.js",
   "dependencies": {
-    "eslint-plugin-prettier": "^2.0.0"
   },
   "peerDependencies": {
-    "eslint": "^4.0.0"
+    "eslint": "^4.0.0",
+    "eslint-plugin-prettier": "^2.0.0"
   },
   "engines": {
     "node": ">= 6"

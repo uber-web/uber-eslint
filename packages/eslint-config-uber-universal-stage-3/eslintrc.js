@@ -5,10 +5,6 @@ module.exports = {
     require.resolve('eslint-config-cup'),
   ],
 
-  plugins: [
-    'eslint-plugin-cup'
-  ],
-
   rules: {
     /**
      * Custom `no-undef` rule to allow appropriate globals within statically analyzable
