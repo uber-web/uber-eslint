@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-uber-universal-stage-3",
+  "version": "0.0.0",
+  "description": "ESlint config for Stage 3+ universal JS",
+  "author": "Web Platform Team <eng-web-platform@uber.com>",
+  "scripts": {
+    "test": "echo ok"
+  },
+  "main": "eslintrc.js",
+  "dependencies": {
+    "eslint-config-uber-base-stage-3": "^0.0.0",
+    "eslint-config-cup": "^1.0.0-rc.2"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 6"
+  },
+  "license": "MIT"
+}

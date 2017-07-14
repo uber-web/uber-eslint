@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-uber-node-lts",
+  "version": "0.0.0",
+  "description": "ESlint config for Node LTS",
+  "author": "Web Platform Team <eng-web-platform@uber.com>",
+  "scripts": {
+    "test": "echo ok"
+  },
+  "main": "eslintrc.js",
+  "dependencies": {
+    "eslint-config-uber-base": "^0.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 6"
+  },
+  "license": "MIT"
+}
