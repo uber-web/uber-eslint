@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo ok"
   },
-  "main": "eslintrc.js",
+  "main": "index.js",
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "eslint-config-uber-base": "^1.0.0-rc.3"

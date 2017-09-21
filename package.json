@@ -12,10 +12,15 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "lerna": "^2.0.0"
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^2.0.0",
+    "eslint-plugin-prettier": "^2.0.0",
+    "lerna": "^2.0.0",
+    "prettier": "^1.7.0"
   },
   "engines": {
     "node": ">=6.0.0"

@@ -1,13 +1,7 @@
 module.exports = {
+  extends: [require.resolve('eslint-config-uber-base')],
 
-  extends: [
-    require.resolve('eslint-config-uber-base')
-  ],
-
-  plugins: [
-    'eslint-plugin-flowtype',
-    'eslint-plugin-react'
-  ],
+  plugins: ['eslint-plugin-flowtype', 'eslint-plugin-react'],
 
   rules: {
     /**
@@ -84,7 +78,7 @@ module.exports = {
      * Ignore stateless components, as it often makes sense to
      * group small components together in a file.
      */
-    'react/no-multi-comp': ['error', { "ignoreStateless": true }],
+    'react/no-multi-comp': ['error', {ignoreStateless: true}],
     /*
      * Prevent usage of the return value of React.render
      */
@@ -268,14 +262,13 @@ module.exports = {
      */
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
 
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    }
-  }
-
+      onlyFilesWithFlowAnnotation: true,
+    },
+  },
 };
