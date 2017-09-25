@@ -1,5 +1,4 @@
 module.exports = {
-
   extends: [
     require.resolve('eslint-config-uber-base-stage-3'),
     require.resolve('eslint-config-cup'),
@@ -12,5 +11,5 @@ module.exports = {
      */
     'no-undef': 'off',
     'cup/no-undef': ['error'],
-  }
+  },
 };

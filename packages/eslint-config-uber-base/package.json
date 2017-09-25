@@ -13,7 +13,10 @@
   "scripts": {
     "test": "echo ok"
   },
-  "main": "eslintrc.js",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-prettier": "^2.0.0"
+  },
   "peerDependencies": {
     "eslint": "^4.0.0",
     "eslint-plugin-prettier": "^2.0.0"
