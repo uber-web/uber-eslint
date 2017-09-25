@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-base-stage-3",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.4",
   "description": "Base ESlint config for Stage 3+ JS",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
   "bugs": {
@@ -16,7 +16,7 @@
   "main": "index.js",
   "dependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint-config-uber-base": "^1.0.0-rc.3"
+    "eslint-config-uber-base": "^1.0.0-rc.4"
   },
   "peerDependencies": {
     "eslint": "^4.0.0"
