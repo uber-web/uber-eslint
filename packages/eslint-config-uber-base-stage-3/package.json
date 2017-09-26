@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-base-stage-3",
-  "version": "1.0.0-rc.5",
+  "version": "1.0.0-rc.6",
   "description": "Base ESlint config for Stage 3+ JS",
   "author": "Web Platform Team <eng-web-platform@uber.com>",
   "bugs": {
