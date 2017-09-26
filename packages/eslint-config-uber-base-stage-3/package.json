@@ -18,7 +18,7 @@
     "eslint-config-uber-base": "^1.0.0-rc.4"
   },
   "peerDependencies": {
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^8.0.0",
     "eslint": "^4.0.0"
   },
   "engines": {
