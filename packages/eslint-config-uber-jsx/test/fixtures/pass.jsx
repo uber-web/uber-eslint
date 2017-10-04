@@ -19,8 +19,8 @@
 // THE SOFTWARE.
 
 'use strict';
-var React = require('react');
 var propTypes = require('prop-types');
+var React = require('react');
 
 function Something(something) {
   return <div className="test">{something.test}</div>;
