@@ -20,12 +20,12 @@
 
 'use strict';
 var React = require('react');
-var PropTypes = require('prop-types');
+var propTypes = require('prop-types');
 
 function Something(something) {
   return <div className="test">{something.test}</div>;
 }
 
 Something.propTypes = {
-  something: PropTypes.object.isRequired
+  something: propTypes.object.isRequired
 };
