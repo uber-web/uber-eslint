@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-uber-jsx",
-  "version": "3.3.3",
+  "version": "4.0.0",
   "description": "The base jsx eslint config for web JavaScript at Uber",
   "keywords": [
     "eslint",
