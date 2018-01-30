@@ -16,9 +16,13 @@
     "lint": "eslint ."
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
     "eslint": "^4.0.0",
     "eslint-config-prettier": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.42.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.0.0",
+    "eslint-plugin-react": "^7.6.1",
     "lerna": "^2.0.0",
     "prettier": "1.7.0"
   },

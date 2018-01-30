@@ -23,11 +23,16 @@ module.exports = {
     'eslint:recommended',
     // Turn off all rules that are unnecessary or might conflict with prettier
     require.resolve('eslint-config-prettier'),
+    'plugin:flowtype/recommended',
+    'plugin:react/recommended',
+    './rules/imports.js',
   ],
 
   plugins: [
     // Use prettier for code format
     'eslint-plugin-prettier',
+    'eslint-plugin-flowtype',
+    'eslint-plugin-react',
   ],
 
   rules: {
@@ -48,6 +53,8 @@ module.exports = {
         parser: 'babylon',
       },
     ],
+    // We should be using flow rather than propTypes
+    'react/prop-types': 'off',
     // We should have a very high bar for adding additional rules here.
     // By using `eslint:recommended` we have intentionally deferred our opinions to an external source.
     // Only well defended and consensus driven additions will be landed.
