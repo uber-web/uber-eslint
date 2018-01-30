@@ -1,0 +1,7 @@
+version: '2'
+services:
+  uber-eslint:
+    build: .
+    volumes:
+      - .:/uber-eslint
+      - /uber-eslint/node_modules/

@@ -1,11 +1,10 @@
 {
   "name": "uber-eslint",
+  "private": true,
   "description": "eslint configs for web JavaScript at Uber",
+  "author": "Web Platform Team <eng-web-platform@uber.com>",
   "bugs": {
     "url": "https://github.com/uber-web/uber-eslint/issues"
-  },
-  "author": {
-    "name": "Uber Web Platform Team"
   },
   "repository": {
     "type": "git",
@@ -13,18 +12,18 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "postinstall": "npm run bootstrap",
     "publish": "lerna publish",
-    "test": "nyc lerna run test"
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "coveralls": "^2.11.15",
-    "lerna": "2.0.0-beta.30",
-    "nyc": "^10.0.0"
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^2.0.0",
+    "eslint-plugin-prettier": "^2.0.0",
+    "lerna": "^2.0.0",
+    "prettier": "1.7.0"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "license": "MIT"
 }

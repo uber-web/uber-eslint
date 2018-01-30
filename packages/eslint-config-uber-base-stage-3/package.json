@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-uber-base-stage-3",
+  "version": "1.0.0-rc.7",
+  "description": "Base ESlint config for Stage 3+ JS",
+  "author": "Web Platform Team <eng-web-platform@uber.com>",
+  "bugs": {
+    "url": "https://github.com/uber-web/uber-eslint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:uber-web/uber-eslint"
+  },
+  "scripts": {
+    "test": "echo ok"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-uber-base": "^1.0.0-rc.7"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.0.0"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "license": "MIT"
+}
