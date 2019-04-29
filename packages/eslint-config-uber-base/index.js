@@ -49,7 +49,6 @@ module.exports = {
         jsxBracketSameLine: false,
         rangeStart: 0,
         rangeEnd: Infinity,
-        parser: 'babylon',
       },
     ],
     // We should have a very high bar for adding additional rules here.
